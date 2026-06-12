@@ -89,7 +89,8 @@ strong{
   backdrop-filter:blur(8px);
   border-bottom:1px solid var(--line);
 }
-.logo{ display:flex; align-items:center; gap:10px; text-decoration:none; }
+.logo{ display:flex; align-items:center; gap:10px; text-decoration:none; min-width:0; flex:0 1 auto; }
+.logo-text{ min-width:0; }
 .logo-stamp{
   width:36px; height:36px; flex-shrink:0;
   background:var(--shu); color:var(--shiro);
@@ -105,6 +106,8 @@ strong{
 .logo-text small{
   font-family:var(--sans); font-size:9px; font-weight:700;
   color:var(--mute); letter-spacing:.18em;
+  white-space:nowrap;
+  overflow:hidden; text-overflow:ellipsis;
 }
 .gnav{ display:flex; align-items:center; gap:24px; }
 .gnav ul{ display:flex; gap:clamp(12px, 1.6vw, 22px); list-style:none; align-items:center; }
@@ -118,7 +121,7 @@ strong{
   transition:transform .25s ease;
 }
 .gnav a:not(.btn):hover::after{ transform:scaleX(1); transform-origin:left; }
-.header-tools{ display:flex; align-items:center; gap:14px; }
+.header-tools{ display:flex; align-items:center; gap:14px; flex-shrink:0; }
 
 /* 言語切替 */
 .lang-switch{
@@ -128,6 +131,7 @@ strong{
   font-family:var(--sans); font-size:11.5px; font-weight:700; letter-spacing:.08em;
   background:var(--shiro); color:var(--sumi);
   border:none; padding:6px 12px; cursor:pointer;
+  white-space:nowrap;
   transition:background-color .2s ease, color .2s ease;
 }
 .lang-btn + .lang-btn{ border-left:1.5px solid var(--sumi); }
@@ -503,6 +507,20 @@ strong{
 }
 .fixed-cta.is-visible{ transform:none; }
 .fixed-cta .btn{ width:100%; padding:14px 10px; font-size:14.5px; box-shadow:none; }
+
+/* ============ 英語表示時のタイポグラフィ ============ */
+/* 筆文字(Yuji Syuku)は英文に向かないため、EN時は欧文セリフに切替 */
+html[lang="en"] .fv-catch,
+html[lang="en"] .sec-title,
+html[lang="en"] .reason h3,
+html[lang="en"] .plan-card h3,
+html[lang="en"] .midcta-copy,
+html[lang="en"] .form-done-title{
+  font-family:var(--en);
+  letter-spacing:.04em;
+}
+html[lang="en"] .fv-catch{ line-height:1.3; }
+html[lang="en"] body, html[lang="en"] .fv-sub{ letter-spacing:.01em; }
 
 /* ============ アクセシビリティ ============ */
 :focus-visible{ outline:2px solid var(--shu); outline-offset:3px; }
