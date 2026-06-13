@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="白木のカウンターで鮨職人が握りを供する体験のイメージ">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F2EFE8"/>
+    </linearGradient>
+    <linearGradient id="hinoki" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EBD9B6"/>
+      <stop offset="1" stop-color="#DCC394"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 背景（暖簾の気配） -->
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1280" height="150" fill="#1C1A17"/>
+  <g fill="#FBFAF7" font-family="serif">
+    <text x="120" y="104" font-size="84">鮨</text>
+    <text x="240" y="104" font-size="84">職</text>
+    <text x="360" y="104" font-size="84">人</text>
+  </g>
+  <!-- 朱の縦帯 -->
+  <rect x="1180" y="0" width="40" height="720" fill="#C73E2E"/>
+
+  <!-- 職人のシルエット（割烹着＋和帽子） -->
+  <g transform="translate(880 200)" fill="#1C1A17">
+    <rect x="-10" y="-60" width="170" height="44" rx="10"/>
+    <circle cx="75" cy="-92" r="40" fill="#F0D7BC"/>
+    <path d="M30 -120 h90 v18 h-90 z"/>
+    <path d="M-30 240 C-40 60 30 -10 75 -10 C120 -10 190 60 180 240 Z" fill="#23211C"/>
+    <path d="M75 -10 V200" stroke="#1C1A17" stroke-width="3" opacity=".4"/>
+    <!-- 腕 -->
+    <path d="M40 120 C0 150 -20 200 -10 250" fill="none" stroke="#23211C" stroke-width="40" stroke-linecap="round"/>
+    <circle cx="-12" cy="252" r="20" fill="#F0D7BC"/>
+  </g>
+
+  <!-- カウンター（白木） -->
+  <rect x="0" y="470" width="1280" height="40" fill="#C9B083"/>
+  <rect x="0" y="510" width="1280" height="210" fill="url(#hinoki)"/>
+  <g stroke="#C2A878" stroke-width="2" opacity=".7">
+    <path d="M0 560H1280M0 620H1280M0 680H1280"/>
+  </g>
+
+  <!-- 鮨下駄と握り -->
+  <g transform="translate(190 430)">
+    <!-- 下駄 -->
+    <rect x="0" y="40" width="360" height="34" rx="6" fill="#F4ECDD" stroke="#C2A878" stroke-width="3"/>
+    <rect x="20" y="74" width="22" height="20" fill="#C9B083"/>
+    <rect x="318" y="74" width="22" height="20" fill="#C9B083"/>
+    <!-- まぐろ -->
+    <g transform="translate(50 0)">
+      <ellipse cx="30" cy="36" rx="44" ry="20" fill="#FFFFFF"/>
+      <path d="M-8 26 q38 -22 76 0 q-6 -18 -38 -18 q-32 0 -38 18z" fill="#C9372B"/>
+    </g>
+    <!-- サーモン -->
+    <g transform="translate(150 2)">
+      <ellipse cx="30" cy="36" rx="44" ry="20" fill="#FFFFFF"/>
+      <path d="M-8 26 q38 -22 76 0 q-6 -18 -38 -18 q-32 0 -38 18z" fill="#EE8A4E"/>
+      <g stroke="#FFF" stroke-width="3" opacity=".6"><path d="M2 18 H58M0 26 H62"/></g>
+    </g>
+    <!-- 玉子 -->
+    <g transform="translate(250 4)">
+      <rect x="-6" y="14" width="72" height="34" rx="6" fill="#F4D470"/>
+      <rect x="22" y="8" width="18" height="46" fill="#22251D"/>
+    </g>
+  </g>
+
+  <!-- 湯気（朱の細線） -->
+  <g stroke="#C73E2E" stroke-width="4" stroke-linecap="round" opacity=".6" fill="none">
+    <path d="M300 380 q-14 -26 0 -52 q14 -26 0 -52"/>
+    <path d="M360 380 q-14 -26 0 -52 q14 -26 0 -52"/>
+  </g>
+
+  <!-- 落款 -->
+  <g transform="translate(120 560)">
+    <rect width="70" height="70" rx="6" fill="#C73E2E"/>
+    <text x="35" y="52" font-size="40" text-anchor="middle" fill="#FBFAF7" font-family="serif">音</text>
+  </g>
+</svg>
